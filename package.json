@@ -1,5 +1,5 @@
 {
-  "name": "ngx-pagination",
+  "name": "@m3rlin94/ngx-pagination",
   "version": "0.0.0",
   "description": "Pagination for Angular",
   "scripts": {
@@ -18,10 +18,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelbromley/ngx-pagination"
+    "url": "https://github.com/m3rlin94/ngx-color-picker"
   },
   "bugs": {
-    "url": "https://github.com/michaelbromley/ngx-pagination/issues"
+    "url": "https://github.com/m3rlin94/ngx-color-picker/issues"
   },
   "author": "Michael Bromley <michael@michaelbromley.co.uk>",
   "license": "MIT",
