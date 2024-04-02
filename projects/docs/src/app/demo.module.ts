@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { DemoAppComponent } from './demo-app.component';
 import { BasicExampleComponent } from './components/basic-example/basic-example.component';
@@ -17,20 +17,13 @@ import { MealsService } from './providers/meals.service';
 import { DocumentationPageComponent } from './components/documentation/documentation-page.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { HttpClientModule } from '@angular/common/http';
-
-const ConfiguredRouterModule = RouterModule.forRoot([
-  {path: '', pathMatch: 'full', component: DocumentationPageComponent},
-  {path: 'basic', component: BasicPageComponent},
-  {path: 'advanced', component: AdvancedPageComponent},
-  {path: 'custom-template', component: CustomPageComponent},
-  {path: 'server-paging', component: ServerPageComponent}
-], {useHash: true});
+import { DemoRoutingModule } from './demo-routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    ConfiguredRouterModule,
+    DemoRoutingModule,
     NgxPaginationModule,
     HighlightModule,
     HttpClientModule,
