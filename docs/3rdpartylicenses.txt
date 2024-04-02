@@ -13,6 +13,9 @@ MIT
 @angular/router
 MIT
 
+@m3rlin94/ngx-pagination
+MIT
+
 highlight.js
 BSD-3-Clause
 BSD 3-Clause License
@@ -95,9 +98,6 @@ This software is provided by the copyright holders and contributors “as is” 
 
 
 ngx-highlightjs
-MIT
-
-ngx-pagination
 MIT
 
 rxjs

@@ -16,7 +16,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-pagination": [
+      "@m3rlin94/ngx-pagination": [
         "dist/ngx-pagination/ngx-pagination",
         "dist/ngx-pagination"
       ]
