@@ -50,7 +50,7 @@ const templateSource = `
 
 const typescriptSource = `
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
-import {PaginationInstance} from 'ngx-pagination';
+import {PaginationInstance} from '@m3rlin94/ngx-pagination';
 
 @Component({
     selector: 'advanced-example',

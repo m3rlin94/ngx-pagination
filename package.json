@@ -1,16 +1,17 @@
 {
-  "name": "ngx-pagination",
-  "version": "0.0.0",
+  "name": "@m3rlin94/ngx-pagination",
+  "version": "0.0.1",
   "description": "Pagination for Angular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build ngx-pagination --configuration production",
     "build:docs": "ng build docs --base-href /ngx-pagination/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:publish": "npm publish dist/ngx-pagination/ --access public"
   },
-  "private": true,
+  "private": false,
   "keywords": [
     "angular",
     "angular2",
@@ -18,12 +19,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelbromley/ngx-pagination"
+    "url": "https://github.com/m3rlin94/ngx-color-picker"
   },
   "bugs": {
-    "url": "https://github.com/michaelbromley/ngx-pagination/issues"
+    "url": "https://github.com/m3rlin94/ngx-color-picker/issues"
   },
-  "author": "Michael Bromley <michael@michaelbromley.co.uk>",
+  "author": "Michael Bromley <michael@michaelbromley.co.uk> & Naveen Cooray",
   "license": "MIT",
   "dependencies": {
     "@angular/animations": "^18.1.0",

@@ -10,4 +10,4 @@ Play with it on StackBlitz here: https://stackblitz.com/edit/angular-e1f9hq
 
 ## Documentation
 
-For full documentation, see https://github.com/michaelbromley/ngx-pagination/blob/master/README.md
+For full documentation, see https://github.com/m3rlin94/ngx-color-picker/blob/master/README.md

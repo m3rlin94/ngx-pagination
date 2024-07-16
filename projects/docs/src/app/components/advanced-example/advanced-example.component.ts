@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
-import { PaginationInstance, NgxPaginationModule } from 'ngx-pagination';
+import { PaginationInstance, NgxPaginationModule } from '@m3rlin94/ngx-pagination';
 import { StringFilterPipe } from "../../string-filter.pipe";
 import { FormsModule } from "@angular/forms";
 
