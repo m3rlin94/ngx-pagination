@@ -1,10 +1,14 @@
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
-import {PaginationInstance} from '@m3rlin94/ngx-pagination';
+import { PaginationInstance, NgxPaginationModule } from '@m3rlin94/ngx-pagination';
+import { StringFilterPipe } from "../../string-filter.pipe";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: 'advanced-example',
     templateUrl: './advanced-example.component.html',
-    changeDetection: ChangeDetectionStrategy.Default
+    changeDetection: ChangeDetectionStrategy.Default,
+    standalone: true,
+    imports: [FormsModule, NgxPaginationModule, StringFilterPipe]
 })
 export class AdvancedExampleComponent {
 

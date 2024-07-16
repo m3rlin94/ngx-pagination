@@ -46,7 +46,7 @@ If you need to support an earlier version of Angular, please use v5.x.
 // app.module.ts
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+import {NgxPaginationModule} from '@m3rlin94/ngx-pagination'; // <-- import the module
 import {MyComponent} from './my.component';
 
 @NgModule({

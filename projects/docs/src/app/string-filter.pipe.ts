@@ -4,7 +4,8 @@ import {Pipe} from "@angular/core";
  * A simple string filter, since Angular does not yet have a filter pipe built in.
  */
 @Pipe({
-    name: 'stringFilter'
+    name: 'stringFilter',
+    standalone: true
 })
 export class StringFilterPipe {
 

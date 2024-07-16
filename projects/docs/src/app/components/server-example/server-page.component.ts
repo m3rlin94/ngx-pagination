@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { MealsService } from '../../providers/meals.service';
+import { HighlightModule } from 'ngx-highlightjs';
+import { ServerExampleComponent } from './server-example.component';
 
 @Component({
     selector: 'server-page',
-    templateUrl: './server-page.component.html'
+    templateUrl: './server-page.component.html',
+    standalone: true,
+    imports: [ServerExampleComponent, HighlightModule]
 })
 export class ServerPageComponent {
     templateSource = templateSource;

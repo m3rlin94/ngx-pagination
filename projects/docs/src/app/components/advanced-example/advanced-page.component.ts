@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { MealsService } from '../../providers/meals.service';
+import { HighlightModule } from 'ngx-highlightjs';
+import { AdvancedExampleComponent } from './advanced-example.component';
 
 @Component({
     selector: 'advanced-page',
-    templateUrl: './advanced-page.component.html'
+    templateUrl: './advanced-page.component.html',
+    standalone: true,
+    imports: [AdvancedExampleComponent, HighlightModule]
 })
 export class AdvancedPageComponent {
     templateSource = templateSource;
@@ -46,7 +50,7 @@ const templateSource = `
 
 const typescriptSource = `
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
-import {PaginationInstance} from 'ngx-pagination';
+import {PaginationInstance} from '@m3rlin94/ngx-pagination';
 
 @Component({
     selector: 'advanced-example',

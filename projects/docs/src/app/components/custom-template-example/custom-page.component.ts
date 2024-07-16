@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { MealsService } from '../../providers/meals.service';
+import { HighlightModule } from 'ngx-highlightjs';
+import { CustomTemplateExampleComponent } from './custom-template-example.component';
 
 @Component({
     selector: 'custom-page',
-    templateUrl: './custom-page.component.html'
+    templateUrl: './custom-page.component.html',
+    standalone: true,
+    imports: [CustomTemplateExampleComponent, HighlightModule]
 })
 export class CustomPageComponent {
     templateSource = templateSource;
@@ -51,7 +55,7 @@ const templateSource = `
 
 const typescriptSource = `
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core"
-import {PaginationInstance} from 'ngx-pagination';
+import {PaginationInstance} from '@m3rlin94/ngx-pagination';
 
 @Component({
     selector: 'custom-template-example',

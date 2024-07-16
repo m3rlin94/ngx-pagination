@@ -1,5 +1,7 @@
 import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core'
 import {DEFAULT_TEMPLATE, DEFAULT_STYLES} from './template';
+import { NgIf, NgFor, DecimalPipe } from '@angular/common';
+import { PaginationControlsDirective } from './pagination-controls.directive';
 
 function coerceToBoolean(input: string | boolean): boolean {
     return !!input && input !== 'false';
@@ -13,7 +15,9 @@ function coerceToBoolean(input: string | boolean): boolean {
     template: DEFAULT_TEMPLATE,
     styles: [DEFAULT_STYLES],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [PaginationControlsDirective, NgIf, NgFor, DecimalPipe]
 })
 export class PaginationControlsComponent {
 

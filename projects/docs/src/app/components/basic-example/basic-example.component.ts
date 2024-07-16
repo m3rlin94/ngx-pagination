@@ -1,10 +1,13 @@
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
+import { NgxPaginationModule } from "@m3rlin94/ngx-pagination";
 
 
 @Component({
     selector: 'basic-example',
     templateUrl: './basic-example.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgxPaginationModule]
 })
 export class BasicExampleComponent {
     @Input('data') meals: string[] = [];

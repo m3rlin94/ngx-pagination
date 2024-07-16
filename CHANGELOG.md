@@ -143,7 +143,7 @@
   2. Rename the NgModule in your app module (and any other places you directly `import from 'ng2-pagination'` in your app):
   ```Diff
   - import {Ng2PaginationModule} from 'ng2-pagination'; 
-  + import {NgxPaginationModule} from 'ngx-pagination'; 
+  + import {NgxPaginationModule} from '@m3rlin94/ngx-pagination'; 
   ```
   3. Rename any styles which override the default component.
   ```Diff

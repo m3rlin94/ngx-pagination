@@ -1,10 +1,12 @@
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core"
-import {PaginationInstance} from '@m3rlin94/ngx-pagination';
+import {PaginationInstance, NgxPaginationModule} from '@m3rlin94/ngx-pagination';
 
 @Component({
     selector: 'custom-template-example',
     templateUrl: './custom-template-example.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgxPaginationModule]
 })
 export class CustomTemplateExampleComponent {
 
