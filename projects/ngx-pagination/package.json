@@ -1,6 +1,6 @@
 {
-  "name": "ngx-pagination",
-  "version": "6.0.3",
+  "name": "@m3rlin94/ngx-pagination",
+  "version": "18.0.0",
   "license": "MIT",
   "keywords": [
     "angular",
@@ -9,15 +9,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelbromley/ngx-pagination"
+    "url": "git@github.com:m3rlin94/ngx-pagination.git"
   },
   "bugs": {
-    "url": "https://github.com/michaelbromley/ngx-pagination/issues"
+    "url": "https://github.com/m3rlin94/ngx-pagination/issues"
   },
-  "author": "Michael Bromley <michael@michaelbromley.co.uk>",
+  "author": "Michael Bromley <michael@michaelbromley.co.uk> & Naveen Cooray",
   "peerDependencies": {
-    "@angular/common": ">=13.0.0",
-    "@angular/core": ">=13.0.0"
+    "@angular/common": ">=18.0.0",
+    "@angular/core": ">=18.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

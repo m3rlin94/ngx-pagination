@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
-import { NgxPaginationModule } from "ngx-pagination";
+import { NgxPaginationModule } from "@m3rlin94/ngx-pagination";
 
 
 @Component({

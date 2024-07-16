@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
 import {Observable, of} from 'rxjs';
 import { delay, map, tap } from 'rxjs/operators';
-import { NgxPaginationModule } from "ngx-pagination";
+import { NgxPaginationModule } from "@m3rlin94/ngx-pagination";
 import { NgClass, AsyncPipe } from "@angular/common";
 
 interface IServerResponse {

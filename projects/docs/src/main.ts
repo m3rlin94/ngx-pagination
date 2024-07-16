@@ -5,7 +5,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { environment } from './environments/environment';
 import { DemoAppComponent } from './app/demo-app.component';
 import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxPaginationModule } from '@m3rlin94/ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
