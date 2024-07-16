@@ -1,12 +1,38 @@
-import { enableProdMode } from '@angular/core';
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { DemoModule } from './app/demo.module';
+
 import { environment } from './environments/environment';
+import { DemoAppComponent } from './app/demo-app.component';
+import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
+import { MealsService } from './app/providers/meals.service';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/demo-routes';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(DemoModule)
+bootstrapApplication(DemoAppComponent, {
+    providers: [
+        importProvidersFrom(BrowserModule, FormsModule, NgxPaginationModule, HighlightModule),
+        MealsService,
+        {
+            provide: HIGHLIGHT_OPTIONS,
+            useValue: {
+                coreLibraryLoader: () => import('highlight.js/lib/core'),
+                languages: {
+                    typescript: () => import('highlight.js/lib/languages/typescript'),
+                    xml: () => import('highlight.js/lib/languages/xml')
+                },
+            }
+        },
+        provideHttpClient(withInterceptorsFromDi()),
+        provideRouter(routes)
+    ]
+})
   .catch(err => console.error(err));

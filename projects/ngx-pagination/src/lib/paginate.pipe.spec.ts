@@ -237,9 +237,10 @@ describe('PaginatePipe:', () => {
 
         beforeEach(() => {
             TestBed.configureTestingModule({
-                declarations: [PaginationControlsComponent, PaginationControlsDirective, ComponentTestComponent, PaginatePipe],
-                providers: [PaginationService],
-            });
+    imports: [PaginationControlsComponent, PaginationControlsDirective, PaginatePipe],
+    declarations: [ComponentTestComponent],
+    providers: [PaginationService],
+});
         });
 
         beforeEach(async(() => {

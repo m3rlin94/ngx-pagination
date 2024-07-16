@@ -4,10 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { marked } from 'marked';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'documentation-page',
-    templateUrl: './documentation-page.component.html'
+    templateUrl: './documentation-page.component.html',
+    standalone: true,
+    imports: [AsyncPipe]
 })
 export class DocumentationPageComponent implements OnInit {
 
