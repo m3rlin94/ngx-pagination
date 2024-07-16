@@ -2,14 +2,55 @@
 
 $primary: #2d7fe8;
 
-@import "node_modules/bulma/sass/utilities/all";
+@import "node_modules/bulma/sass/utilities/initial-variables.scss";
+@import "node_modules/bulma/sass/utilities/css-variables.scss";
+@import "node_modules/bulma/sass/utilities/extends.scss";
+@import "node_modules/bulma/sass/utilities/functions.scss";
+@import "node_modules/bulma/sass/utilities/mixins.scss";
+@import "node_modules/bulma/sass/utilities/derived-variables.scss";
+@import "node_modules/bulma/sass/utilities/controls.scss";
 
 
-@import "node_modules/bulma/sass/base/all";
-@import "node_modules/bulma/sass/elements/all";
-@import "node_modules/bulma/sass/components/all";
-@import "node_modules/bulma/sass/layout/all";
-@import "node_modules/bulma/sass/grid/all";
+@import "node_modules/bulma/sass/base/animations.scss";
+@import "node_modules/bulma/sass/base/generic.scss";
+@import "node_modules/bulma/sass/base/minireset.scss";
+@import "node_modules/bulma/sass/base/skeleton.scss";
+
+@import "node_modules/bulma/sass/elements/block.scss";
+@import "node_modules/bulma/sass/elements/box.scss";
+@import "node_modules/bulma/sass/elements/button.scss";
+@import "node_modules/bulma/sass/elements/content.scss";
+@import "node_modules/bulma/sass/elements/delete.scss";
+@import "node_modules/bulma/sass/elements/icon.scss";
+@import "node_modules/bulma/sass/elements/image.scss";
+@import "node_modules/bulma/sass/elements/loader.scss";
+@import "node_modules/bulma/sass/elements/notification.scss";
+@import "node_modules/bulma/sass/elements/progress.scss";
+@import "node_modules/bulma/sass/elements/table.scss";
+@import "node_modules/bulma/sass/elements/tag.scss";
+@import "node_modules/bulma/sass/elements/title.scss";
+
+@import "node_modules/bulma/sass/components/breadcrumb.scss";
+@import "node_modules/bulma/sass/components/card.scss";
+@import "node_modules/bulma/sass/components/dropdown.scss";
+@import "node_modules/bulma/sass/components/menu.scss";
+@import "node_modules/bulma/sass/components/message.scss";
+@import "node_modules/bulma/sass/components/modal.scss";
+@import "node_modules/bulma/sass/components/navbar.scss";
+@import "node_modules/bulma/sass/components/pagination.scss";
+@import "node_modules/bulma/sass/components/panel.scss";
+@import "node_modules/bulma/sass/components/tabs.scss";
+
+@import "node_modules/bulma/sass/layout/container.scss";
+@import "node_modules/bulma/sass/layout/footer.scss";
+@import "node_modules/bulma/sass/layout/hero.scss";
+@import "node_modules/bulma/sass/layout/level.scss";
+@import "node_modules/bulma/sass/layout/media.scss";
+@import "node_modules/bulma/sass/layout/section.scss";
+
+@import "node_modules/bulma/sass/grid/columns.scss";
+@import "node_modules/bulma/sass/grid/grid.scss";
+@import "node_modules/bulma/sass/grid/columns-v2.scss";
 
 @import "spinner";
 
