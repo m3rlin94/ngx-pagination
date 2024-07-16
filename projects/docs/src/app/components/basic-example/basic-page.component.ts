@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { MealsService } from '../../providers/meals.service';
+import { HighlightModule } from 'ngx-highlightjs';
+import { BasicExampleComponent } from './basic-example.component';
 
 @Component({
     selector: 'basic-page',
-    templateUrl: './basic-page.component.html'
+    templateUrl: './basic-page.component.html',
+    standalone: true,
+    imports: [BasicExampleComponent, HighlightModule]
 })
 export class BasicPageComponent {
     basicCodeT = basicCodeT;

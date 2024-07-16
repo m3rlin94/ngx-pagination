@@ -23,7 +23,8 @@ export interface PipeState {
 
 @Pipe({
     name: 'paginate',
-    pure: false
+    pure: false,
+    standalone: true
 })
 export class PaginatePipe {
 

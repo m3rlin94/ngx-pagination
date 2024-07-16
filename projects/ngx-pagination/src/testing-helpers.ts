@@ -70,15 +70,17 @@ export function overrideTemplate<T>(component: Type<T>, templateString: string):
 @Component({
     template: `
     <ul>
-        <li *ngFor="let item of collection | paginate: config" class="list-item">{{ item }}</li>
+      @for (item of collection | paginate: config; track item) {
+        <li class="list-item">{{ item }}</li>
+      }
     </ul>
     <pagination-controls [id]="config.id"
-                         (pageChange)="pageChanged($event)"
-                         (pageBoundsCorrection)="pageChangedBoundsCorrection($event)"
-                         [maxSize]="maxSize"
-                         [directionLinks]="directionLinks"
-                         [autoHide]="autoHide"
-                         [responsive]="responsive">
+      (pageChange)="pageChanged($event)"
+      (pageBoundsCorrection)="pageChangedBoundsCorrection($event)"
+      [maxSize]="maxSize"
+      [directionLinks]="directionLinks"
+      [autoHide]="autoHide"
+      [responsive]="responsive">
     </pagination-controls>`
 })
 export class ComponentTestComponent {

@@ -12,9 +12,9 @@ describe('PaginationControlsDirective:', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [PaginationControlsDirective, DirectiveTestComponent, PaginatePipe, BoundsCorrectionTestComponent],
-            providers: [PaginationService],
-        });
+    imports: [PaginationControlsDirective, DirectiveTestComponent, PaginatePipe, BoundsCorrectionTestComponent],
+    providers: [PaginationService],
+});
     });
 
     it('should warn on interaction when an unknown id is used', fakeAsync(() => {
@@ -267,26 +267,39 @@ describe('PaginationControlsDirective:', () => {
 @Component({
     template: `
     <ul>
-        <li *ngFor="let item of collection | paginate: config" class="list-item">{{ item }}</li>
+      @for (item of collection | paginate: config; track item) {
+        <li class="list-item">{{ item }}</li>
+      }
     </ul>
     <pagination-template #p="paginationApi"
-                         [id]="config.id"
-                         [maxSize]="maxSize"
-                         (pageChange)="pageChanged($event)">
-        <div class="custom-template">
-            <div class="pagination-previous" [class.disabled]="p.isFirstPage()" *ngIf="p.directionLinks">
-                <span *ngIf="!p.isFirstPage()" (click)="p.previous()">back</span>
-            </div>
-
-            <div class="page-link" [class.current]="p.getCurrent() === page.value" *ngFor="let page of p.pages">
-                <span (click)="p.setCurrent(page.value)">{{ page.label }}</span>
-            </div>
-
-            <div class="pagination-next" [class.disabled]="p.isLastPage()" *ngIf="p.directionLinks">
-                <span *ngIf="!p.isLastPage()" (click)="p.next()">forward</span>
-            </div>
-        </div>
-    </pagination-template>`
+      [id]="config.id"
+      [maxSize]="maxSize"
+      (pageChange)="pageChanged($event)">
+      <div class="custom-template">
+        @if (p.directionLinks) {
+          <div class="pagination-previous" [class.disabled]="p.isFirstPage()">
+            @if (!p.isFirstPage()) {
+              <span (click)="p.previous()">back</span>
+            }
+          </div>
+        }
+    
+        @for (page of p.pages; track page) {
+          <div class="page-link" [class.current]="p.getCurrent() === page.value">
+            <span (click)="p.setCurrent(page.value)">{{ page.label }}</span>
+          </div>
+        }
+    
+        @if (p.directionLinks) {
+          <div class="pagination-next" [class.disabled]="p.isLastPage()">
+            @if (!p.isLastPage()) {
+              <span (click)="p.next()">forward</span>
+            }
+          </div>
+        }
+      </div>
+    </pagination-template>`,
+    standalone: true
 })
 export class DirectiveTestComponent {
     maxSize: number = 9;
@@ -311,18 +324,23 @@ export class DirectiveTestComponent {
 @Component({
     template: `
         <ul>
-            <li *ngFor="let item of collection | paginate: config" class="list-item">{{ item }}</li>
+          @for (item of collection | paginate: config; track item) {
+            <li class="list-item">{{ item }}</li>
+          }
         </ul>
         <pagination-template #p="paginationApi"
-                             [id]="config.id"
-                             (pageChange)="pageChanged($event)"
-                             (pageBoundsCorrection)="pageChangedBoundsCorrection($event)">
-            <div class="custom-template">
-                <div class="page-link" [class.current]="p.getCurrent() === page.value" *ngFor="let page of p.pages">
-                    <span (click)="p.setCurrent(page.value)">{{ page.label }}</span>
-                </div>
-            </div>
-        </pagination-template>`
+          [id]="config.id"
+          (pageChange)="pageChanged($event)"
+          (pageBoundsCorrection)="pageChangedBoundsCorrection($event)">
+          <div class="custom-template">
+            @for (page of p.pages; track page) {
+              <div class="page-link" [class.current]="p.getCurrent() === page.value">
+                <span (click)="p.setCurrent(page.value)">{{ page.label }}</span>
+              </div>
+            }
+          </div>
+        </pagination-template>`,
+    standalone: true
 })
 export class BoundsCorrectionTestComponent {
     collection: string[] = [];
